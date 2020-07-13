@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <div v-for='imagem in imagens'>
+            <img 
+                v-bind:src="imagem" width='100px'>
+        </div> -->
+        <!-- <p v-for='(fruta, index) in frutas'>
+            {{index}} - {{fruta.nome}} / {{fruta.cor}}
+        </p> -->
+        <ul>
+            <li v-for="(value, key, index) in usuario">
+                <b>{{key}}</b>: {{value}}
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                imagens: ['vueLogo.png', 'vueLogo2.png','vueLogo3.jpg'],
+                frutas: [
+                    {nome:'pera', cor: 'verde'}, 
+                    {nome: 'uva', cor: 'verde'}, 
+                    {nome: 'maçã', cor: 'vermelha'}],
+                usuario: {
+                    nome: "Thiago",
+                    telelfone: "12345",
+                    email: "thiago@thiago.com",
+                    sobrenome: "Fernandes"
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>
